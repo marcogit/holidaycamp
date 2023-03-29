@@ -1,0 +1,138 @@
+.card {
+  &.card-thumbnail--slider {
+    border-radius: $br-medium;
+    overflow: hidden;
+    transition: $tr-normal;
+
+    .card-img-overlay {
+      text-align: center;
+      top: inherit;
+      padding: $s-normal $s-normal $s-big;
+      transition: $tr-normal;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      top: 50%;
+
+      img {
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+
+    &:hover {
+      .card-img-overlay {
+        top: 0;
+        justify-content: center;
+      }
+    }
+  }
+
+  &.card--thumbnail--post {
+    border-radius: $br-normal;
+    padding: $s-normal;
+    transition: $tr-normal;
+    border-color: transparent;
+    position: relative;
+    text-decoration: none;
+
+    @media (max-width: $break-lg) {
+      padding: 0;
+      border-radius: 0;
+      margin-bottom: $s-medium;
+    }
+
+    .card-header {
+      padding: 0;
+      background: transparent;
+      border: none;
+      line-height: 0;
+
+      img {
+        width: 100%;
+      }
+
+      &:first-child {
+        @media (max-width: $break-lg) {
+          border-radius: 0;
+        }
+      }
+    }
+
+    .card-body {
+      padding: $s-normal 0;
+
+      .card-body--date {
+        display: flex;
+        justify-content: flex-start;
+        gap: $s-small;
+        align-items: center;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .card-footer {
+      padding: $s-normal;
+      background: none;
+      border: none;
+      height: 0;
+      opacity: 0;
+      transition: $tr-normal;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+
+      @media (max-width: $break-lg) {
+        height: auto;
+        opacity: 1;
+        position: relative;
+        padding: 0;
+      }
+
+      p {
+        font-size: $s-input;
+        line-height: $lh-base;
+      }
+
+      .card-footer--bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: $s-small;
+        margin-bottom: $s-small--n;
+      }
+    }
+
+    &:hover {
+      box-shadow: $sh-sm;
+      margin-bottom: 0;
+      margin-top: -55%;
+      z-index: 3;
+      padding-bottom: 55%;
+
+      @media (max-width: $break-lg) {
+        box-shadow: inherit;
+      }
+
+      @media (max-width: $break-lg) {
+        margin-top: -45%;
+        padding-bottom: 45%;
+      }
+
+      @media (max-width: $break-lg) {
+        margin-top: inherit;
+        padding-bottom: $s-normal;
+      }
+
+      .card-footer {
+        height: auto;
+        opacity: 1;
+      }
+    }
+  }
+}

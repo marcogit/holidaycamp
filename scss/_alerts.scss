@@ -1,0 +1,61 @@
+.alert {
+  position: relative;
+  border-radius: $br-normal;
+
+  p {
+    margin-bottom: 0;
+
+  }
+
+  .flag {
+    @media (max-width: $break-md) {
+      margin-bottom: $s-medium;
+    }
+  }
+
+  &.alert-small {
+    padding: $s-small;
+    border-radius: $br-small;
+
+    p {
+      line-height: $lh-title;
+    }
+  }
+
+  &.alert-light {
+    background: white;
+    border-color: transparent;
+  }
+
+  &.alert-success {
+    background: $success;
+    border-color: $success;
+    color: white;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: white;
+    }
+
+    &.alert-success--special {
+      min-height: 101px;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+  
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        content: "";
+        display: block;
+        background: url(../images/bg-alert--success.svg);
+        width: 89px;
+        height: 101px;
+      }
+    }
+  }
+}

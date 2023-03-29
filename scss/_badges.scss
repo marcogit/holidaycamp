@@ -1,0 +1,14 @@
+.badge {
+  font-weight: $f-weight--light;
+  text-decoration: none;
+
+  &.badge-outline {
+    border: $gray-text solid 1px;
+    color: $gray-text;
+  }
+
+  &.badge-outline--secondary {
+    border: $secondary solid 1px;
+    color: $secondary;
+  }
+}

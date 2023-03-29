@@ -1,0 +1,335 @@
+.form-label {
+  font-size: $s-label;
+
+  &.title-label {
+    font-weight: $f-weight--medium;
+    color: $secondary;
+    font-size: $s-input;
+    margin-bottom: 0;
+  }
+}
+
+.form-title--small {
+  margin-bottom: $s-normal;
+}
+
+.form-control {
+  font-size: $s-input;
+  padding: $s-normal;
+  border-radius: $br-small;
+  border-color: $light;
+  position: relative;
+
+  &.form-control-sm {
+    padding: 5px $s-small;
+  }
+
+  &:focus {
+    box-shadow: $sh-focus;
+    border-color: $light;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    position: absolute;
+    color: transparent;
+    background: transparent;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    pointer-events: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.form-select {
+  font-size: $s-input;
+  padding: $s-normal $s-big $s-normal $s-normal;
+  border-radius: $br-small;
+
+  &.form-select-sm {
+    padding-top: $s-small;
+    padding-bottom: $s-small;
+    padding-left: $s-small;
+    font-size: $s-link;
+  }
+
+  &:focus {
+    box-shadow: none;
+    border-color: $secondary-light;
+  }
+}
+
+.form-range--values {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  option {
+    font-weight: $f-weight--medium;
+    font-size: $s-input;
+  }
+}
+
+.form-range {
+  padding: 0 $s-min 0 0;
+}
+
+.input-group {
+  background: white;
+  border: solid 1px $light;
+  border-radius: $br-small;
+  margin-bottom: $s-normal;
+  display: flex;
+  padding: $s-small 0;
+
+  &.input-group--small {
+    width: auto;
+    text-align: center;
+
+    .form-control {
+      text-align: center;
+    }
+  }
+
+  &.input-group--last {
+    border-left: solid 1px $light;
+  }
+
+  .input-group-text {
+    background: white;
+    border-color: transparent;
+  }
+
+  .input-group--content {
+    .form-label {
+      font-weight: $f-weight--medium;
+      margin: $s-min--n 0 0 0;
+      padding: 0;
+    }
+
+    .form-text {
+      font-size: $s-link;
+      display: inline-block;
+      color: $base;
+    }
+
+    .form-control {
+      width: 100%;
+      display: block;
+      border-color: transparent;
+      padding: 0;
+      color: $secondary-light;
+      margin-bottom: $s-normal--n;
+      background: transparent;
+
+      &:not(:placeholder-shown) ~ label,
+      &:focus ~ label,
+      &.form-select ~ label {
+        transform: none;
+        opacity: 1;
+      }
+
+      &::placeholder {
+        color: $secondary-light;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    input[type=number] {
+      &.form-control {
+        margin-bottom: -13px;
+      }
+    }
+  }
+}
+
+.accordion-body--info {
+  padding-top: $s-normal;
+}
+
+.form-group {
+  border-radius: $br-small;
+  border: solid 1px $light;
+  display: flex;
+  margin-bottom: $s-medium;
+
+  .input-group {
+    margin-bottom: 0;
+    border-color: transparent;
+  }
+
+  &.form-group--booking {
+    padding: $s-normal;
+    flex-direction: column;
+
+    h4 {
+      font-size: $s-input;
+    }
+
+    .form-group--booking-th {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      @media (max-width: $break-lg) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $s-small;
+      }
+
+      .link {
+        @media (max-width: $break-lg) {
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+
+  &.active {
+    box-shadow: $sh-border;
+  }
+
+  &.form-group--quantity {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+
+    .input-group {
+      align-items: center;
+      padding: 0;
+
+      .form-control {
+        border-color: transparent;
+        width: auto;
+        max-width: $s-medium;
+        padding: 0;
+        text-align: center;
+      }
+    }
+
+    &.form-group--quantity-small {
+      .input-group {
+        .form-control {
+          font-size: $s-label;
+          color: $gray-text;
+          max-width: $s-extra;
+        }
+      }
+    }
+  }
+
+  &.form-group-small {
+    margin-bottom: $s-normal;
+
+    &>.input-group {
+      padding-right: $s-small;
+      width: auto;
+
+      @media (max-width: $break-lg) {
+        width: 100%;
+      }
+
+      .input-group--content {
+        flex: 0 0 auto;
+        width: auto;
+        min-width: 200px;
+      }
+
+      .input-group-text {
+        min-width: 65px;
+        text-align: center;
+
+        img {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+      }
+
+      .form-label {
+        font-size: $s-base;
+      }
+
+      .form-text {
+        padding-top: $s-normal;
+
+      }
+    }
+  }
+}
+
+.form-check {
+  .form-check-label {
+    font-size: $s-input;
+    line-height: $lh-medium;
+  }
+
+  &.form-check--small {
+    margin-top: $s-small;
+    .form-check-label {
+      font-size: $s-link;
+      line-height: $lh-base;
+    }
+  }
+
+  &.form-switch {
+    display: inline-flex;
+    align-items: center;
+    padding: $s-small $s-normal;
+    border-radius: $br-normal;
+  
+    .form-check-input {
+      margin: 0 $s-small 0 0;
+      min-width: 35px;
+    }
+  }
+}
+
+form {
+  label {
+    font-size: $s-input;
+  }
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.s-header--select {
+  display: flex;
+  align-items: center;
+  gap: $s-small;
+
+  .form-label {
+    display: block;
+    font-size: $s-input;
+    font-weight: $f-weight--medium;
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+/* reset arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,161 @@
+.btn {
+  text-transform: uppercase;
+  font-size: $s-button;
+  letter-spacing: $ls-medium;
+  font-weight: $f-weight--medium;
+  border-radius: $br-small;
+  padding: $s-small $s-normal;
+  border: none;
+  transition: $tr-normal;
+  min-width: $s-min-w-button;
+  box-shadow: $sh-md;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $s-small;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: transparent;
+  }
+
+  &.btn-full {
+    width: 100%;
+  }
+
+  &.btn-small {
+    min-width: inherit;
+    text-transform: inherit;
+    font-size: $s-link;
+  }
+
+  &.btn-min {
+    min-width: inherit;
+    text-transform: inherit;
+    font-size: $s-link;
+    padding: $s-min $s-small;
+  }
+
+  &.btn-circle {
+    border-radius: $br-big;
+    width: $s-big;
+    height: $s-big;
+    min-width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+    &.btn-small {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.btn-transparent {
+    border: none;
+    background: none;
+    box-shadow: none;
+  }
+
+  &.btn-primary {
+    background: $gr--primary;
+    color: white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $gr--primary-hover;
+      color: white;
+    }
+  }
+
+  &.btn-secondary {
+    background: $secondary;
+    color: white;
+
+    svg {
+      fill: white;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $secondary-dark;
+      color: white;
+    }
+
+    &.disabled {
+      background: white;
+      border: $secondary solid 1px;
+
+      svg {
+        fill: $secondary;
+      }
+    }
+  }
+
+  &.btn-white {
+    background: white;
+    color: $gray-text;
+
+    svg {
+      fill: $gray-text;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $super-light;
+      color: $secondary;
+    }
+
+    &.disabled {
+      background: white;
+      border: white solid 1px;
+
+      svg {
+        fill: $secondary;
+      }
+    }
+  }
+
+  &.btn-alternative {
+    background: $gr--alternative;
+    color: white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $gr--alternative-hover;
+    }
+  }
+
+  &.btn-success {
+    background: $gr--success;
+    color: white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $gr--success-hover;
+    }
+  }
+
+  &.btn-big {
+    padding-top: $s-normal;
+    padding-bottom: $s-normal;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.button-none {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  line-height: 0;
+}

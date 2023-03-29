@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Holiday Camp" />
+    <meta name="3D Vista" content="Holiday Camp" />
+    <meta name="generator" content="Squembri" />
+    <title>ADMIN - Holiday Camp</title>
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      href="images/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="images/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="images/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="mask-icon"
+      href="images/favicons/safari-pinned-tab.svg"
+      color="#26DBAA"
+    />
+    <link rel="icon" href="images/favicons/favicon.ico" />
+    <meta name="theme-color" content="#26DBAA" />
+    <!-- Custom JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+      integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="main-header" id="mainHeader">
+      <nav class="navbar navbar-expand-lg" aria-label="Main Menu">
+        <div class="container">
+          <a class="navbar-brand" href="#" title="Holiday Camp">
+            <img
+              class="navbar-brand--color"
+              alt="Holiday Camp"
+              src="images/logo-color.svg"
+            />
+            <img
+              class="navbar-brand--white"
+              alt="Holiday Camp"
+              src="images/logo-white.svg"
+            />
+          </a>
+          <div class="navbar-right">
+            <button class="navbar-toggler navbar-toggler--admin" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18.464"
+                height="21.5"
+                viewBox="0 0 18.464 21.5"
+              >
+                <g transform="translate(-1740.25 430.75)">
+                  <g transform="translate(1741 -430)">
+                    <path
+                      d="M4.725-.75A5.475,5.475,0,1,1-.75,4.725,5.481,5.481,0,0,1,4.725-.75Zm0,9.45A3.975,3.975,0,1,0,.75,4.725,3.98,3.98,0,0,0,4.725,8.7Z"
+                      transform="translate(3.757 0)"
+                      fill=""
+                    />
+                    <path
+                      d="M90.846,513.591a15.955,15.955,0,0,1-8.9-2.7.75.75,0,0,1-.332-.669,9.248,9.248,0,0,1,18.461,0,.75.75,0,0,1-.332.669A15.949,15.949,0,0,1,90.846,513.591Zm-7.7-3.705a14.529,14.529,0,0,0,15.391,0,7.748,7.748,0,0,0-15.391,0Z"
+                      transform="translate(-82.364 -492.841)"
+                      fill=""
+                    />
+                  </g>
+                </g>
+              </svg>
+            </button>
+            <button
+              class="navbar-toggler navbar-toggler--menu"
+              id="navbar-toggler--control"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarsMainMenu"
+              data-target="#navbarsMainMenu"
+              aria-controls="navbarsMainMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="18"
+                viewBox="0 0 20 18"
+              >
+                <g transform="translate(0 1)">
+                  <line x1="20" fill="none" stroke="" stroke-width="2" />
+                  <line
+                    x1="20"
+                    transform="translate(0 8)"
+                    fill="none"
+                    stroke=""
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="20"
+                    transform="translate(0 16)"
+                    fill="none"
+                    stroke=""
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarsMainMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >CAMPINGS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">QUIÉNES SOMOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONTACTO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SOY PROPIETARIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link--border" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14.536"
+                    height="16.869"
+                    viewBox="0 0 14.536 16.869"
+                  >
+                    <g transform="translate(-1740.25 430.75)">
+                      <g transform="translate(1741 -430)">
+                        <path
+                          d="M3.631-.75A4.381,4.381,0,1,1-.75,3.631,4.386,4.386,0,0,1,3.631-.75Zm0,7.262A2.881,2.881,0,1,0,.75,3.631,2.884,2.884,0,0,0,3.631,6.512Z"
+                          transform="translate(2.887 0)"
+                        />
+                        <path
+                          d="M88.882,511.148a12.434,12.434,0,0,1-6.935-2.1.75.75,0,0,1-.332-.669,7.28,7.28,0,0,1,14.533,0,.75.75,0,0,1-.332.669A12.429,12.429,0,0,1,88.882,511.148Zm-5.728-3.11a10.992,10.992,0,0,0,11.454,0,5.781,5.781,0,0,0-11.454,0Z"
+                          transform="translate(-82.364 -495.029)"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                  Rafael</a
+                >
+              </li>
+            </ul>
+            <div class="navbar-collapse--bottom">
+              <ul class="list-inline footer-social">
+                <li>
+                  <a href="#" target="_blank" title="Facebook">
+                    <img
+                      src="images/icon-social--facebook.svg"
+                      alt="Facebook"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" title="Instagram">
+                    <img
+                      src="images/icon-social--instagram.svg"
+                      alt="Instagram"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" title="Youtube">
+                    <img src="images/icon-social--youtube.svg" alt="Youtube" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" title="Twitter">
+                    <img src="images/icon-social--twitter.svg" alt="Twitter" />
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-inline list-legal">
+                <li><a href="#">Aviso Legal</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Política de cookies</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <section class="s-form">
+        <div class="fixed-nav--mobile fixed-nav--mobile-admin d-mobile">
+          <ul>
+            <li>
+              <a href="#" class="fixed-nav--mobile-item">
+                <div class="pay-nav--icon">
+                  <img src="images/icon-admin-01--user.svg" alt="Mi perfil" />
+                </div>
+                <span>Mi perfil</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fixed-nav--mobile-item active">
+                <div class="pay-nav--icon">
+                  <img
+                    src="images/icon-admin-02--booking.svg"
+                    alt="Mis reservas"
+                  />
+                </div>
+                <span>Mis reservas</span>
+              </a>
+            </li>
+            <li></li>
+            <li>
+              <a href="#" class="fixed-nav--mobile-item">
+                <div class="pay-nav--icon">
+                  <img
+                    src="images/icon-admin-03--logout.svg"
+                    alt="Cerrar sesión"
+                  />
+                </div>
+                <span>Cerrar sesión</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-3 d-desktop">
+              <aside class="admin-sidebar">
+                <div class="panel panel-shadow my-bg-white pb-2">
+                  <div class="panel-header">
+                    <h4>Rafael Zaragoza</h4>
+                  </div>
+                  <div class="panel-body">
+                    <ul class="list-group list-group-flush list-admin">
+                      <li class="list-group-item">
+                        <a href="#admin-panel-01" class="">
+                          <img
+                            src="images/icon-admin-01--user.svg"
+                            alt="Mi perfil"
+                          />
+                          <span>Mi perfil</span>
+                        </a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="#admin-panel-02" class="active">
+                          <img
+                            src="images/icon-admin-02--booking.svg"
+                            alt="Mis reservas"
+                          />
+                          <span>Mis reservas</span>
+                        </a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="#admin-panel-03" class="">
+                          <img
+                            src="images/icon-admin-03--logout.svg"
+                            alt="Cerrar sesión"
+                          />
+                          <span>Cerrar sesión</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </aside>
+            </div>
+            <div class="col">
+              <div class="tab-content">
+                <!-- Admin Panel 02  -->
+                <div class="panel admin-panel">
+                  <div class="admin-panel--group">
+                    <h2 class="admin-header--title">Tu historial de reservas</h2>
+                    <div class="panel panel-shadow my-bg-white admin-panel--item">
+                      <div class="row">
+                        <div class="col-md-auto">
+                          <figure>
+                            <img src="images/thumbnail_admin_booking.jpg" />
+                          </figure>
+                        </div>
+                        <div class="col col--vertical-align">
+                          <div class="col--vertical-align--top">
+                            <div class="panel-title">
+                              <h3 class="mb-0">Camping La Biznaguilla</h3>
+                              <ul class="list-inline list-score">
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                              </ul>
+                            </div>
+                            <ul class="list-inline list-date-small">
+                              <li>
+                                <img src="images/icon-marker--black-small.svg" />
+                                <small>
+                                  C/ Paraíso del sol - Benajarafe - Málaga
+                                </small>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col--vertical-align--bottom">
+                            <h4>Bungalow 3 personas</h4>
+                            <ul class="list-inline list-date-small mb-0">
+                              <li>
+                                <img src="images/icon-calendar--black-small.svg" />
+                                <small> 24 de Mayo de 2023 </small>
+                              </li>
+                              <li>
+                                <img src="images/icon-ch--right-black.svg" />
+                                <small> 19 de Junio de 2022 </small>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-xl-auto col-lg-12 col-md-3 panel-price">
+                          <h5>505€</h5>
+                          <a href="#" class="btn btn-primary btn-big"
+                            >Gestionar reserva</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="admin-panel--group">
+                    <h2 class="admin-header--title">Próximas reservas</h2>
+                    <div class="panel panel-shadow my-bg-white admin-panel--item">
+                      <div class="row">
+                        <div class="col-md-auto">
+                          <figure>
+                            <img src="images/thumbnail_admin_booking.jpg" />
+                          </figure>
+                        </div>
+                        <div class="col col--vertical-align">
+                          <div class="col--vertical-align--top">
+                            <div class="panel-title">
+                              <h3 class="mb-0">Camping La Biznaguilla</h3>
+                              <ul class="list-inline list-score">
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                              </ul>
+                            </div>
+                            <ul class="list-inline list-date-small">
+                              <li>
+                                <img src="images/icon-marker--black-small.svg" />
+                                <small>
+                                  C/ Paraíso del sol - Benajarafe - Málaga
+                                </small>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col--vertical-align--bottom">
+                            <h4>Bungalow 3 personas</h4>
+                            <ul class="list-inline list-date-small mb-0">
+                              <li>
+                                <img src="images/icon-calendar--black-small.svg" />
+                                <small> 24 de Mayo de 2023 </small>
+                              </li>
+                              <li>
+                                <img src="images/icon-ch--right-black.svg" />
+                                <small> 19 de Junio de 2022 </small>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-xl-auto col-lg-12 col-md-3 panel-price">
+                          <h5>314€</h5>
+                          <a href="#" class="btn btn-alternative"
+                            ><img src="images/icon-star--white.svg"> Valora tu experiencia</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-shadow my-bg-white admin-panel--item">
+                      <div class="row">
+                        <div class="col-md-auto">
+                          <figure>
+                            <img src="images/thumbnail_admin_booking.jpg" />
+                          </figure>
+                        </div>
+                        <div class="col col--vertical-align">
+                          <div class="col--vertical-align--top">
+                            <div class="panel-title">
+                              <h3 class="mb-0">Camping La Biznaguilla</h3>
+                              <ul class="list-inline list-score">
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                                <li><img src="images/icon-star--color.svg" /></li>
+                              </ul>
+                            </div>
+                            <ul class="list-inline list-date-small">
+                              <li>
+                                <img src="images/icon-marker--black-small.svg" />
+                                <small>
+                                  C/ Paraíso del sol - Benajarafe - Málaga
+                                </small>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col--vertical-align--bottom">
+                            <h4>Bungalow 3 personas</h4>
+                            <ul class="list-inline list-date-small mb-0">
+                              <li>
+                                <img src="images/icon-calendar--black-small.svg" />
+                                <small> 24 de Mayo de 2023 </small>
+                              </li>
+                              <li>
+                                <img src="images/icon-ch--right-black.svg" />
+                                <small> 19 de Junio de 2022 </small>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-xl-auto col-lg-12 col-md-3 panel-price">
+                          <h5>314€</h5>
+                          <a href="#" class="btn btn-alternative"
+                            ><img src="images/icon-star--white.svg"> Valora tu experiencia</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="main-footer--top">
+        <div class="container">
+          <ul class="list-inline list-prefooter">
+            <li>
+              <img
+                src="images/icon-prefooter-01.svg"
+                alt="Precios exclusivos"
+              />
+              <strong>Precios exclusivos</strong>
+            </li>
+            <li>
+              <img
+                src="images/icon-prefooter-02.svg"
+                alt="La mayor selección de campings"
+              />
+              <strong>La mayor selección de campings</strong>
+            </li>
+            <li>
+              <img
+                src="images/icon-prefooter-03.svg"
+                alt="Facilidades de pago"
+              />
+              <strong>Facilidades de pago</strong>
+            </li>
+            <li>
+              <img src="images/icon-prefooter-04.svg" alt="Visa" />
+              <img src="images/icon-prefooter-05.svg" alt="MasterCard" />
+              <strong>Pago 100% seguro</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-footer--content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-footer--a">
+              <div class="brand-footer">
+                <img src="images/logo-white.svg" />
+              </div>
+              <p>
+                Disfruta la experiencia de irte de camping desde el primer paso.
+              </p>
+              <p class="d-desktop">
+                Copyright © HolidayCamp.<br />Todos los derechos reservados.
+              </p>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-lg-4 col-footer--b">
+              <span class="footer-title"> Destinos destacados </span>
+              <ul class="list-footer">
+                <li>
+                  <a href="#">Campings en Cádiz</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Santander</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Barcelona</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Huesca</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Girona</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Valencia</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Málaga</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Galicia</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-footer--b">
+              <span class="footer-title"> Destinos destacados </span>
+              <ul class="list-footer">
+                <li>
+                  <a href="#">Campings en Cádiz</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Santander</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Barcelona</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Huesca</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Girona</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Valencia</a>
+                </li>
+                <li>
+                  <a href="#">Campings en Málaga</a>
+                </li>
+                <li class="footer-social--listitem">
+                  <ul class="list-inline footer-social">
+                    <li>
+                      <a href="#" target="_blank" title="Facebook">
+                        <img
+                          src="images/icon-social--facebook.svg"
+                          alt="Facebook"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" title="Instagram">
+                        <img
+                          src="images/icon-social--instagram.svg"
+                          alt="Instagram"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" title="Youtube">
+                        <img
+                          src="images/icon-social--youtube.svg"
+                          alt="Youtube"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" title="Twitter">
+                        <img
+                          src="images/icon-social--twitter.svg"
+                          alt="Twitter"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <p class="d-mobile">
+                Copyright © HolidayCamp.<br />Todos los derechos reservados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+  </body>
+</html>

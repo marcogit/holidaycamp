@@ -1,0 +1,147 @@
+header {
+    &.main-header {
+        padding-top: $s-normal;
+        padding-bottom: $s-normal;
+        position: fixed;
+        z-index: 500;
+        left: 0;
+        right: 0;
+        top: 0;
+        transition: $tr-normal;
+
+        @media (max-width: $break-lg) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .navbar-right {
+            @media (max-width: $break-lg) {
+                padding-top: 4px;
+            }
+        }
+
+        .navbar-toggler {
+            border-color: transparent;
+            outline: none;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            .navbar-toggler-icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            svg {
+                line {
+                    transition: $tr-normal;
+                }
+            }
+        }
+
+        .navbar-brand {
+            width: $s-logo--desktop;
+
+            img {
+                max-width: 100%;
+            }
+
+            @media (max-width: $break-lg) {
+                width: $s-logo--mobile;
+            }
+        }
+
+        .navbar {
+            @media (max-width: $break-lg) {
+                height: 100%;
+                align-items: flex-start;
+            }
+
+            .container {
+                @media (max-width: $break-lg) {
+                    height: 100%;
+                    align-items: flex-start;
+                }
+            }
+
+            .navbar-collapse--bottom {
+                position: fixed;
+                display: none;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: $s-medium;
+
+                @media (max-width: $break-lg) {
+                    display: block;
+                }
+            }
+
+            .navbar-nav {
+                gap: $s-normal;
+                align-items: center;
+
+                .nav-item {
+                    .nav-link {
+                        text-transform: uppercase;
+                        font-size: $s-button;
+                        letter-spacing: $ls-small;
+                        font-weight: $f-weight--medium;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: $s-small;
+
+                        @media (max-width: $break-lg) {
+                            font-size: $s-lead;
+                        }
+
+                        svg {
+                            transition: $tr-normal;
+                        }
+
+                        &.nav-link--border {
+                            border: solid 2px;
+                            border-radius: $br-small;
+                            font-size: $s-label;
+                            padding-bottom: $s-min;
+                            padding-top: $s-min;
+                        }
+                    }
+
+                    &:last-child {
+                        @media (max-width: $break-lg) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.main-header--full {
+            height: 100%;
+
+            .navbar-toggler {
+                &.navbar-toggler--menu {
+                    svg {
+                        line {
+                            &:nth-child(1n) {
+                                transform: rotate(45deg);
+                            }
+
+                            &:nth-child(2n) {
+                                opacity: 0;
+                            }
+
+                            &:nth-child(3n) {
+                                transform: rotate(-45deg) translateX(-10px) translateY(10px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

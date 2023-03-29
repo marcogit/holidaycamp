@@ -1,0 +1,136 @@
+// breakpoints 
+$break-xs: 0;
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+$break-xxl: 1400px;
+
+// Colors
+$primary: #26DBAA;
+$primary-medium: #00B9A4;
+$primary-dark: #009F8D;
+$super-light: #EDF4F6;
+$hiper-light: #F4F7F8;
+$light: #B5CFD6;
+$secondary-light: #7C9FAC;
+$secondary: #006681;
+$secondary-dark: #004564;
+$alternative: #FF953B;
+$alternative-light: #FFCB77;
+$alternative-dark: #FF7B29;
+$success-light: #97F8DE;
+$success-shadow:#7AEBD2;
+$success: #26DBAA;
+$success-medium:#21C7A0;
+$success-dark: #138B82;
+$success-black: #00545F;
+$base: #000000;
+$link-color: #001d2b;
+$link-color: #BEA435;
+$gray-dark: #888888;
+$gray: #CCCCCC;
+$gray-light: #E5EFF2;
+$gray-text: #5D7E8B;
+$gray-disabled: #9CADB4;
+$dark: #00141D;
+
+
+// Sizes
+$s-min: 3px;
+$s-small: 7.5px;
+$s-normal: 16px;
+$s-medium: 25px;
+$s-icon: 37px;
+$s-big: 45px;
+$s-extra: 60px;
+$s-extra-medium: 72px;
+$s-extra-big: 90px;
+$s-big-big: 120px;
+$s-min-w-button: 180px;
+$s-pageheader: 600px;
+$s-pageheader--mobile: 400px;
+
+$s-logo--desktop: 182px;
+$s-logo--mobile: 147px;
+
+$s-min--n: -3px;
+$s-small--n: -7.5px;
+$s-normal--n: -16px;
+$s-medium--n: -25px;
+$s-big--n: -45px;
+$s-extra--n: -60px;
+$s-extra-medium--n: -72px;
+$s-extra-big--n: -90px;
+$s-big-big--n: -120px;
+
+
+// Fonts
+$font-brand: 'Outfit', sans-serif;
+$f-weight--light: 300;
+$f-weight--medium: 600;
+$f-weight--bold: 900;
+
+$ls-small: 0.16px;
+$ls-medium: 0.30px;
+
+$lh-title: 1em;
+$lh-medium: 1.25em;
+$lh-description: 1.45em;
+$lh-base: 1.6em;
+
+$s-title--big: 155px;
+$s-title--medium: 99px;
+$s-title--small: 86px;
+$s-title: 44px;
+$s-title--small-mobile: 36px;
+$s-title--admin: 30px;
+$s-title--mobile: 28px;
+$s-title--item--accordion: 26px;
+$s-title--item: 24px;
+$s-title--item--mobile: 22px;
+$s-lead: 20px;
+$s-base: 18px;
+$s-link: 14px;
+$s-label: 13px;
+$s-super--small: 10px;
+$s-input: 16px;
+$s-button: 16px;
+$s-text--small: 16px;
+
+// Radius
+$br-small: 9px;
+$br-normal: 15px;
+$br-medium: 24px;
+$br-big:300px;
+
+// Transitions
+$tr-normal: all 0.2s ease;
+
+// Gradients
+$gr--dark: linear-gradient(0deg, rgba(0,29,43,0.5) 0%, rgba(0,29,43,0) 100%);
+$gr--white-toright: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7917760854341737) 51%, rgba(255,255,255,0) 100%);
+
+$gr--primary: linear-gradient(0deg, $primary-medium 0%, $primary 100%);
+$gr--primary-hover: linear-gradient(0deg, $primary-dark 0%, $primary 100%);
+
+$gr--success: linear-gradient(0deg, $success-dark 0%, $success 100%);
+$gr--success-hover: linear-gradient(0deg, $success-dark 0%, $success-medium 100%);
+
+$gr--alternative: linear-gradient(0deg, $alternative 0%, $alternative-light 100%);
+$gr--alternative-hover: linear-gradient(0deg, $alternative-dark 0%, $alternative-light 100%);
+
+$gr--pageheader: linear-gradient(0deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0) 100%);
+
+// Shadows
+$sh-sm: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$sh-md: rgba(0, 0, 0, 0.1) 0px 3px 20px;
+$sh-lg: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+$sh-border: 0px 0px 0px 8px $super-light;
+$sh-active: 0px 0px 0px 3px $secondary;
+$sh-active-thumb: 0px 0px 0px 3px white;
+$sh-focus: 0px 0px 0px 3px rgba(0,69,100,0.10);
+$sh-header: 0px 3px 0px 0px rgba(0,102,129,0.10);
+$sh-panel: 0px 3px 20px #003A4A33;
+$sh-to-top: 0px -50px 20px #003A4A33;
+$sh-to-bottom: 0px 10px 10px rgba(0,69,100,0.10);
