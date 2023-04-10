@@ -53,15 +53,15 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <!-- Swiper CSS -->
+    <!-- Flickity CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      href="css/flickity.css"
     />
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet" />
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#detail--menu" data-bs-offset="0" tabindex="0" data-bs-offset="400">
     <!-- HEADER -->
     <header class="main-header" id="mainHeader">
       <nav class="navbar navbar-expand-lg" aria-label="Main Menu">
@@ -261,9 +261,7 @@
           <!-- Slider main container -->
           <div class="herogallerySwiper">
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slide item -->
-              <div class="swiper-slide">
+              <div class="gallery-cell">
                 <a
                   href="#"
                   role="button"
@@ -273,8 +271,7 @@
                   <img src="images/thumbnail_hero_detail.jpg" />
                 </a>
               </div>
-              <!-- Slide item -->
-              <div class="swiper-slide">
+              <div class="gallery-cell">
                 <a
                   href="#"
                   role="button"
@@ -284,8 +281,7 @@
                   <img src="images/thumbnail_hero_detail.jpg" />
                 </a>
               </div>
-              <!-- Slide item -->
-              <div class="swiper-slide">
+              <div class="gallery-cell">
                 <a
                   href="#"
                   role="button"
@@ -295,14 +291,9 @@
                   <img src="images/thumbnail_hero_detail.jpg" />
                 </a>
               </div>
-            </div>
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
           </div>
           <!-- END Slider main container -->
+
         </div>
       </section>
       <!-- Section Intro -->
@@ -353,9 +344,9 @@
                       <ul class="list-inline list-date-small mb-0">
                         <li>
                           <img src="images/icon-marker--black-small.svg" />
-                          <small>
+                          <a class="link" href="#s-detail-02">
                             C/ Paraíso del sol - Benajarafe - Málaga
-                          </small>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -386,19 +377,19 @@
                 </div>
                 <div class="col--vertical-align--bottom">
                   <div class="row align-items-center">
-                    <div class="col-auto">
+                    <div class="col-auto col-icon-fix">
                       <div class="icon-type icon-type--noborder">
                         <img src="images/icon-location--01.svg" />
                       </div>
                     </div>
-                    <div class="col-auto p-0">
+                    <div class="col-auto pe-0">
                       <ul class="list-inline list-reviews">
                         <li><span>Reseñas de HolidayCamp</span></li>
                         <li><strong>8,6</strong></li>
                         <li>/ 10</li>
                       </ul>
                     </div>
-                    <div class="col">
+                    <div class="col-md">
                       <div class="row align-items-center">
                         <div class="col">
                           <div class="flag flag-success">
@@ -436,8 +427,8 @@
                 </div>
               </div>
               <!-- video -->
-              <div class="col-lg-3 d-desktop">
-                <div class="video iframe-fix">
+              <div class="col-xxl-3 col-xl-4 col-lg-3 d-desktop--big">
+                <div class="ratio box-ratio small-ratio">
                   <video
                     src="images/demo_video.mp4"
                     autoplay
@@ -448,8 +439,8 @@
                 </div>
               </div>
               <!-- map -->
-              <div class="col-lg-4 col-md-5 d-tablet">
-                <div class="map iframe-fix">
+              <div class="col-xxl-4 col-xl-3 col-lg d-desktop">
+                <div class="ratio box-ratio small-ratio">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.1872027617005!2d-3.622059984712106!3d37.148247979878306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fcc07458f173%3A0xe07f28a11b700f64!2sSquembri%20Agencia%20Creativa!5e0!3m2!1ses!2ses!4v1679564625101!5m2!1ses!2ses"
                     style="border: 0"
@@ -505,8 +496,7 @@
           </div>
         </div>
       </div>
-      <!-- Scroll Spy Sections -->
-      <div data-bs-spy="scroll" data-bs-target="#detail--menu">
+      <!-- Scroll Spy Sections -->  
         <!-- Section Panels -->
         <section class="my-bg-hiperlight s-detail-panels" id="s-detail-01">
           <div class="container">
@@ -635,8 +625,10 @@
                 <div class="row">
                   <!-- COL 00 -->
                   <div class="col-lg-2 col-md-3 col-4">
-                    <figure>
-                      <img src="images/thumbnail_list.jpg" />
+                    <figure class="figure-fix-img figure-fix-img--subitem">
+                      <span>
+                        <img src="images/thumbnail_list.jpg" />
+                      </span>
                     </figure>
                   </div>
                   <!-- COL 01 -->
@@ -778,8 +770,10 @@
                 <div class="row">
                   <!-- COL 00 -->
                   <div class="col-lg-2 col-md-3 col-4">
-                    <figure>
-                      <img src="images/thumbnail_list.jpg" />
+                    <figure class="figure-fix-img figure-fix-img--subitem">
+                      <span>
+                        <img src="images/thumbnail_list.jpg" />
+                      </span>
                     </figure>
                   </div>
                   <!-- COL 01 -->
@@ -967,7 +961,7 @@
                 </article>
                 <div class="row">
                   <div class="col">
-                    <div class="map iframe-box mb-4">
+                    <div class="ratio box-ratio ratio-4x3 mb-4">
                       <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.1872027617005!2d-3.622059984712106!3d37.148247979878306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fcc07458f173%3A0xe07f28a11b700f64!2sSquembri%20Agencia%20Creativa!5e0!3m2!1ses!2ses!4v1679564625101!5m2!1ses!2ses"
                         style="border: 0"
@@ -1011,7 +1005,7 @@
               </div>
               <div class="col-lg-3 col-md-4 col-border">
                 <aside class="info-aside">
-                  <div class="video iframe-small mb-4">
+                  <div class="ratio ratio-16x9 box-ratio custom-ratio mb-4">
                     <video src="images/demo_video.mp4" controls="controls">
                       Tu navegador no admite el elemento <code>video</code>.
                     </video>
@@ -1072,9 +1066,9 @@
         <!-- Section Opinions -->
         <section class="my-bg-white s-detail-opinions" id="s-detail-03">
           <div class="container">
-            <div class="s-header row">
+            <div class="s-header row mb-3">
               <div class="col-lg col-title">
-                <h4>Presentación de Camping La Biznaguilla</h4>
+                <h4>Opiniones de Camping La Biznaguilla</h4>
                 <ul class="list-inline list-score">
                   <li>
                     <img src="images/icon-star--color.svg" />
@@ -1222,6 +1216,27 @@
               <div class="col">
                 <!-- Listado de comentarios -->
                 <ul class="list-group list-group-flush list-opinions">
+                  <li class="list-group-item list-group-item--header">
+                    <div class="row justify-content-between align-items-center">
+                      <div class="col-auto">
+                        <h5>34 opiniones</h5>
+                      </div>
+                      <div class="col-auto d-desktop">
+                        <div class="s-header--select">
+                          <label class="form-label">Ordenar por:</label>
+                          <select
+                            class="form-select form-select-sm"
+                            aria-label="Default select example"
+                          >
+                            <option selected>Precio más bajo</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                   <li class="list-group-item">
                     <div class="row">
                       <div class="col-md-3">
@@ -1411,7 +1426,6 @@
             </div>
           </div>
         </section>
-      </div>
       <!-- END Scroll Spy Sections -->
     </main>
     <!-- FOOTER -->
@@ -1728,90 +1742,70 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-xl-9">
-                <div class="col-slider-mobile">
+              <div class="col-xxl-10 col-xl-9 col-center--modal">
                   <!-- Slider -->
                   <div class="fullherogallerySwiper">
-                    <div class="swiper-wrapper">
-                      <!-- Slide item -->
-                      <div class="swiper-slide">
+                      <div class="gallery-cell">
                         <img src="images/thumbnail_hero_detail.jpg" />
                       </div>
-                      <!-- Slide item -->
-                      <div class="swiper-slide">
+                      <div class="gallery-cell">
                         <img src="images/thumbnail_hero_detail_02.jpg" />
                       </div>
-                      <!-- Slide item -->
-                      <div class="swiper-slide">
+  
+                      <div class="gallery-cell">
                         <img src="images/thumbnail_hero_detail_03.jpg" />
                       </div>
-                      <div class="swiper-slide">
+                      <div class="gallery-cell">
                         <img src="images/thumbnail_hero_detail.jpg" />
                       </div>
-                      <!-- Slide item -->
-                      <div class="swiper-slide">
+                      <div class="gallery-cell">
                         <img src="images/thumbnail_hero_detail_02.jpg" />
                       </div>
-                      <!-- Slide item -->
-                      <div class="swiper-slide">
+                      <div class="gallery-cell">
                         <img src="images/thumbnail_hero_detail_03.jpg" />
                       </div>
-                      <div class="swiper-slide">
+                      <div class="gallery-cell">
                         <img src="images/thumbnail_hero_detail.jpg" />
                       </div>
-                      <!-- Slide item -->
-                      <div class="swiper-slide">
+                      <div class="gallery-cell">
                         <img src="images/thumbnail_hero_detail_02.jpg" />
                       </div>
-                      <!-- Slide item -->
-                      <div class="swiper-slide">
+                      <div class="gallery-cell">
                         <img src="images/thumbnail_hero_detail_03.jpg" />
                       </div>
-                    </div>
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
                   </div>
-               </div>
                 <!-- thumbsSlider -->
                 <div thumbsSlider="" class="thumbherogallerySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="gallery-cell">
                       <img src="images/thumbnail_hero_detail_small.jpg" />
                     </div>
-                    <div class="swiper-slide">
+                    <div class="gallery-cell">
                       <img src="images/thumbnail_hero_detail_02_small.jpg" />
                     </div>
-                    <div class="swiper-slide">
+                    <div class="gallery-cell">
                       <img src="images/thumbnail_hero_detail_03_small.jpg" />
                     </div>
-                    <div class="swiper-slide">
+                    <div class="gallery-cell">
                       <img src="images/thumbnail_hero_detail_small.jpg" />
                     </div>
-                    <div class="swiper-slide">
+                    <div class="gallery-cell">
                       <img src="images/thumbnail_hero_detail_02_small.jpg" />
                     </div>
-                    <div class="swiper-slide">
+                    <div class="gallery-cell">
                       <img src="images/thumbnail_hero_detail_03_small.jpg" />
                     </div>
-                    <div class="swiper-slide">
+                    <div class="gallery-cell">
                       <img src="images/thumbnail_hero_detail_small.jpg" />
                     </div>
-                    <div class="swiper-slide">
+                    <div class="gallery-cell">
                       <img src="images/thumbnail_hero_detail_02_small.jpg" />
                     </div>
-                    <div class="swiper-slide">
+                    <div class="gallery-cell">
                       <img src="images/thumbnail_hero_detail_03_small.jpg" />
                     </div>
-                  </div>
-                  <!-- If we need navigation buttons -->
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
                 </div>
               </div>
-              <div class="col-xl-3 d-desktop--big">
+              <div class="col-xxl-2 col-xl-3 d-desktop--big">
                 <div class="panel panel-small my-bg-white">
                   <div class="panel-header">
                     <h5>Servicios</h5>
@@ -1964,87 +1958,68 @@
               <div class="col-lg-9">
                 <div class="modal-scroll">
                   <div class="row">
-                    <div class="col-lg-10">
+                    <div class="col-xl-10">
                       <!-- Slider -->
                       <div class="fullitemgallerySwiper">
-                          <div class="swiper-wrapper">
-                            <!-- Slide item -->
-                            <div class="swiper-slide">
+                            <div class="gallery-cell">
                               <img src="images/thumbnail_item_detail.jpg" />
                             </div>
-                            <!-- Slide item -->
-                            <div class="swiper-slide">
+                            <div class="gallery-cell">
                               <img src="images/thumbnail_item_detail_02.jpg" />
                             </div>
-                            <!-- Slide item -->
-                            <div class="swiper-slide">
+                            <div class="gallery-cell">
                               <img src="images/thumbnail_item_detail_03.jpg" />
                             </div>
-                            <div class="swiper-slide">
+                            <div class="gallery-cell">
                               <img src="images/thumbnail_item_detail.jpg" />
                             </div>
-                            <!-- Slide item -->
-                            <div class="swiper-slide">
+                            <div class="gallery-cell">
                               <img src="images/thumbnail_item_detail_02.jpg" />
                             </div>
-                            <!-- Slide item -->
-                            <div class="swiper-slide">
+                            <div class="gallery-cell">
                               <img src="images/thumbnail_item_detail_03.jpg" />
                             </div>
-                            <div class="swiper-slide">
+                            <div class="gallery-cell">
                               <img src="images/thumbnail_item_detail.jpg" />
                             </div>
-                            <!-- Slide item -->
-                            <div class="swiper-slide">
+                            <div class="gallery-cell">
                               <img src="images/thumbnail_item_detail_02.jpg" />
                             </div>
-                            <!-- Slide item -->
-                            <div class="swiper-slide">
+                            <div class="gallery-cell">
                               <img src="images/thumbnail_item_detail_03.jpg" />
                             </div>
-                          </div>
-                          <!-- If we need navigation buttons -->
-                          <div class="swiper-button-next"></div>
-                          <div class="swiper-button-prev"></div>
-                          <!-- Add Pagination -->
-                          <div class="swiper-pagination"></div>
                       </div>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-xl-2">
                       <!-- thumbsSlider -->
                       <div thumbsSlider="" class="thumbitemgallerySwiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
+                          <div class="gallery-cell">
                             <img src="images/thumbnail_hero_detail_square.jpg" />
                           </div>
-                          <div class="swiper-slide">
+                          <div class="gallery-cell">
                             <img src="images/thumbnail_hero_detail_02_square.jpg" />
                           </div>
-                          <div class="swiper-slide">
+                          <div class="gallery-cell">
                             <img src="images/thumbnail_hero_detail_03_square.jpg" />
                           </div>
-                          <div class="swiper-slide">
+                          <div class="gallery-cell">
                             <img src="images/thumbnail_hero_detail_square.jpg" />
                           </div>
-                          <div class="swiper-slide">
+                          <div class="gallery-cell">
                             <img src="images/thumbnail_hero_detail_02_square.jpg" />
                           </div>
-                          <div class="swiper-slide">
+                          <div class="gallery-cell">
                             <img src="images/thumbnail_hero_detail_03_square.jpg" />
                           </div>
-                          <div class="swiper-slide">
+                          <div class="gallery-cell">
                             <img src="images/thumbnail_hero_detail_square.jpg" />
                           </div>
-                          <div class="swiper-slide">
+                          <div class="gallery-cell">
                             <img src="images/thumbnail_hero_detail_02_square.jpg" />
                           </div>
-                          <div class="swiper-slide">
+                          <div class="gallery-cell">
                             <img src="images/thumbnail_hero_detail_03_square.jpg" />
                           </div>
-                        </div>
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
                       </div>
                     </div>
                   </div>
@@ -2197,8 +2172,8 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Flickity JS -->
+    <script src="js/flickity.pkgd.min.js"></script>
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
   </body>

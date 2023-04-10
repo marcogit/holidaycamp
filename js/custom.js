@@ -1,175 +1,89 @@
 /* Javascript */
 (function () {
-  var swiper1 = new Swiper(".simpleSwiper", {
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    // Pagination
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
+  $(".cardSwiper").flickity({
+    initialIndex: 0,
+    cellAlign: "left",
+    prevNextButtons: true,
+    freeScroll: true,
+    pageDots: false,
   });
 
-  var swiper2 = new Swiper(".sublistSwiper", {
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  $(".gallerySwiper").flickity({
+    initialIndex: 0,
+    wrapAround: true,
+    cellAlign: "center",
+    setGallerySize: true,
+    lazyLoad: true,
+    prevNextButtons: true,
+    pageDots: false,
+  });
+  
+  $(".herogallerySwiper").flickity({
+    initialIndex: 0,
+    wrapAround: true,
+    cellAlign: "center",
+    autoPlay: 4000,
+    setGallerySize: true,
+    prevNextButtons: true,
+    draggable: false,
   });
 
-  var swiper3 = new Swiper(".cardSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 15,
-    freeMode: true,
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      576: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-    },
+  $(".simpleSwiper").flickity({
+    initialIndex: 0,
+    cellAlign: "left",
+    setGallerySize: true,
+    lazyLoad: true,
+    prevNextButtons: true,
   });
 
-  var swiper4 = new Swiper(".gallerySwiper", {
-    lazy: true,
-    slidesPerView: 1,
-    spaceBetween: 0,
-    centeredSlides: true,
-    loop: true,
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      576: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1200: {
-        slidesPerView: 3,
-      },
-    },
-  });
-
-  var swiper5 = new Swiper(".herogallerySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    centeredSlides: true,
-    loop: true,
-    // Pagination
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  $(".sublistSwiper").flickity({
+    initialIndex: 0,
+      cellAlign: "left",
+      setGallerySize: true,
+      lazyLoad: true,
+      prevNextButtons: true,
+      pageDots: false,
   });
 
   $("#galleryfullModal").on("shown.bs.modal", function () {
-    var swiper6a = new Swiper(".thumbherogallerySwiper", {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesProgress: true,
-      breakpoints: {
-        600: {
-          slidesPerView: 7,
-        },
-      },
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+    $(".thumbherogallerySwiper").flickity({
+      initialIndex: 0,
+      cellAlign: "left",
+      setGallerySize: true,
+      asNavFor: ".fullherogallerySwiper",
+      contain: true,
+      prevNextButtons: true,
+      pageDots: false,
     });
-    var swiper6b = new Swiper(".fullherogallerySwiper", {
-      lazy: true,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      centeredSlides: true,
-      // Pagination
-      pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-      },
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      // Thumbs
-      thumbs: {
-        swiper: swiper6a,
-      },
+
+    $(".fullherogallerySwiper").flickity({
+      initialIndex: 0,
+      cellAlign: "left",
+      setGallerySize: true,
+      asNavFor: ".thumbherogallerySwiper",
+      lazyLoad: true,
+      prevNextButtons: true,
     });
   });
 
   $("#itemModal").on("shown.bs.modal", function () {
-    var swiper7a = new Swiper(".thumbitemgallerySwiper", {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      freeMode: true,
-      on: {
-        init: (swiper) => {
-          let totalGap =
-            swiper.passedParams.spaceBetween *
-            (swiper.passedParams.slidesPerView - 1);
-          let containerHeight =
-            swiper.passedParams.slidesPerView * swiper.slides[0].clientHeight +
-            totalGap;
-          swiper.el.style.height = containerHeight + "px";
-        },
-      },
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      // Responsive
-      breakpoints: {
-        991: {
-          direction: "vertical",
-        },
-      },
+    $(".thumbitemgallerySwiper").flickity({
+      initialIndex: 0,
+      cellAlign: "left",
+      setGallerySize: true,
+      asNavFor: ".fullitemgallerySwiper",
+      contain: true,
+      prevNextButtons: true,
+      pageDots: false,
     });
-    var swiper7b = new Swiper(".fullitemgallerySwiper", {
-      lazy: true,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      centeredSlides: true,
-      // Pagination
-      pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-      },
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      // Thumbs
-      thumbs: {
-        swiper: swiper7a,
-      },
+
+    $(".fullitemgallerySwiper").flickity({
+      initialIndex: 0,
+      cellAlign: "left",
+      setGallerySize: true,
+      asNavFor: ".thumbitemgallerySwiper",
+      lazyLoad: true,
+      prevNextButtons: true,
     });
   });
 
@@ -221,7 +135,7 @@
     $("#mainHeader").toggleClass("main-header--full");
   });
 
-  /*-- Seidebar Filter --*/
+  /*-- Sidebar Filter --*/
   $("#filters-aside--show").click(function () {
     $("#filters-aside--panel").addClass("filters-aside--full");
   });

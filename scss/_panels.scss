@@ -387,10 +387,6 @@
 
     figure {
       margin-bottom: 0;
-
-      @media (max-width: $break-md) {
-        margin-bottom: $s-normal;
-      }
     }
 
     .list-date-small {
@@ -687,6 +683,15 @@
     box-shadow: $sh-to-top;
     border-bottom: $light solid 1px;
 
+    .col-icon-fix {
+      padding-right: 0;
+      @media (max-width: $break-sm) {
+        position: absolute;
+        top: $s-big;
+        right: $s-normal;
+      }
+    }
+
     .sticker {
       @media (max-width: $break-lg) {
         top: 4px;
@@ -725,6 +730,10 @@
 
         @media (max-width: $break-md) {
           font-size: $s-title--item--mobile;
+        }
+
+        @media (max-width: $break-sm) {
+          width: 90%;
         }
       }
     }

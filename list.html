@@ -53,10 +53,10 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <!-- Swiper CSS -->
+    <!-- Flickity CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      href="css/flickity.css"
     />
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet" />
@@ -719,29 +719,16 @@
                     <div class="row">
                       <div class="col-md-4">
                         <!-- SLIDER -->
-                        <div class="swiper simpleSwiper">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <figure>
-                                <img src="images/thumbnail_list.jpg" />
-                              </figure>
-                            </div>
-                            <div class="swiper-slide">
-                              <figure>
-                                <img src="images/thumbnail_list.jpg" />
-                              </figure>
-                            </div>
-                            <div class="swiper-slide">
-                              <figure>
-                                <img src="images/thumbnail_list.jpg" />
-                              </figure>
-                            </div>
+                        <div class="simpleSwiper">
+                          <div class="gallery-cell">
+                            <img src="images/thumbnail_list.jpg" />
                           </div>
-                          <!-- If we need navigation buttons -->
-                          <div class="swiper-button-prev"></div>
-                          <div class="swiper-button-next"></div>
-                          <!-- Add Pagination -->
-                          <div class="swiper-pagination"></div>
+                          <div class="gallery-cell">
+                            <img src="images/thumbnail_list.jpg" />
+                          </div>
+                          <div class="gallery-cell">
+                            <img src="images/thumbnail_list.jpg" />
+                          </div>
                         </div>
                         <!-- END SLIDER -->
                       </div>
@@ -1198,29 +1185,16 @@
                     <div class="row">
                       <div class="col-md-4">
                         <!-- SLIDER -->
-                        <div class="swiper simpleSwiper">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <figure>
-                                <img src="images/thumbnail_list.jpg" />
-                              </figure>
-                            </div>
-                            <div class="swiper-slide">
-                              <figure>
-                                <img src="images/thumbnail_list.jpg" />
-                              </figure>
-                            </div>
-                            <div class="swiper-slide">
-                              <figure>
-                                <img src="images/thumbnail_list.jpg" />
-                              </figure>
-                            </div>
+                        <div class="simpleSwiper">
+                          <div class="gallery-cell">
+                            <img src="images/thumbnail_list.jpg" />
                           </div>
-                          <!-- If we need navigation buttons -->
-                          <div class="swiper-button-prev"></div>
-                          <div class="swiper-button-next"></div>
-                          <!-- Add Pagination -->
-                          <div class="swiper-pagination"></div>
+                          <div class="gallery-cell">
+                            <img src="images/thumbnail_list.jpg" />
+                          </div>
+                          <div class="gallery-cell">
+                            <img src="images/thumbnail_list.jpg" />
+                          </div>
                         </div>
                         <!-- END SLIDER -->
                       </div>
@@ -1385,9 +1359,9 @@
                   <!-- PANEL -->
                   <div class="panel panel-shadow my-bg-white panel-sublist d-desktop--big">
                     <!-- sublistSwiper -->
-                    <div class="swiper sublistSwiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                    <div class="sublistSwiper">
+
+                        <div class="gallery-cell">
                           <!-- item -->
                           <a href="#" class="panel panel-sublist-subitem">
                             <div class="row align-items-xl-center">
@@ -1454,7 +1428,7 @@
                           </a>
                           <!-- end item -->
                         </div>
-                        <div class="swiper-slide">
+                        <div class="gallery-cell">
                           <!-- item -->
                           <a href="#" class="panel panel-sublist-subitem">
                             <div class="row align-items-xl-center">
@@ -1521,10 +1495,7 @@
                           </a>
                           <!-- end item -->
                         </div>
-                      </div>
-                      <!-- If we need navigation buttons -->
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-button-next"></div>
+
                     </div>
                     <!-- END sublistSwiper -->
                   </div>
@@ -2214,8 +2185,8 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Flickity JS -->
+    <script src="js/flickity.pkgd.min.js"></script>
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
   </body>

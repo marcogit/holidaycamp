@@ -110,6 +110,56 @@ body {
     img {
       max-width: 100%;
     }
+
+    &.figure-fix-img {
+      position: relative;
+      width: 100%;
+
+      span {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+      }
+
+      &.figure-fix-img--list {
+        &::after {
+          padding-bottom: 100%;
+
+          @media (max-width: $break-lg) {
+            padding-bottom: 55%;
+          }
+        }
+      }
+
+      &.figure-fix-img--subitem {
+        img {
+          @media (max-width: $break-sm) {
+          height: 100%;
+          width: auto;
+          max-width: inherit;
+          }
+        }
+
+        &::after {
+          padding-bottom: 100%;
+
+          @media (max-width: $break-sm) {
+            padding-bottom: 150%;
+          }
+        }
+      }
+    }
   }
 
   p {
@@ -731,7 +781,6 @@ body {
           margin-top: $s-min;
         }
       }
-      
     }
 
     &.list-group--compact {
@@ -780,7 +829,7 @@ body {
       li {
         border-color: $light;
         padding: 0;
-  
+
         a {
           color: $base;
           text-decoration: none;
@@ -807,8 +856,24 @@ body {
 
     &.list-opinions {
       .list-group-item {
-        padding: $s-medium 0;
+        padding: $s-big 0;
         border-color: $light;
+
+        @media (max-width: $break-lg) {
+          padding: $s-medium 0;
+        }
+
+        &.list-group-item--header {
+          padding-bottom: $s-normal;
+          padding-top: 0;
+
+          @media (max-width: $break-lg) {
+            padding-bottom: $s-small;
+            margin-bottom: $s-normal--n;
+            margin-top: $s-medium;
+            z-index: 2;
+          }
+        }
       }
     }
   }

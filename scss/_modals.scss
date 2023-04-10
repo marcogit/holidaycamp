@@ -49,15 +49,30 @@
             background: url(../images/icon-close--modal.svg) no-repeat center center;
           }
         }
-      }
-    }
-  }
 
-  .modal-header {
-    .panel-title {
-      display: flex;
-      align-items: center;
-      gap: $s-small;
+        .panel-title {
+          display: flex;
+          align-items: center;
+          gap: $s-small;
+        }
+      }
+
+      .modal-body {
+        .col-center--modal {
+          @media (max-width: $break-lg) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+          }
+
+          .fullherogallerySwiper {
+            @media (max-width: $break-lg) {
+              margin-bottom: auto;
+              margin-top: 10vh;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -112,109 +127,108 @@
   }
 
   &#galleryfullModal {
-    .modal-content {
-      background: transparent;
-      box-shadow: none;
-
-      .panel {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-
-        .panel-body {
-          margin-bottom: auto;
-        }
-
-        .panel-bottom {
-          border-top: $light solid 1px;
-          padding-top: $s-small;
-          margin-top: $s-normal;
-        }
-
-        .btn {
-          width: 100%;
-        }
-
-        .panel-footer {
-          font-size: $s-input;
-          padding-top: $s-normal;
-
-          p {
-            font-size: $s-link;
-            line-height: $lh-description;
-            margin-bottom: $s-small;
-
-            strong {
-              display: block;
-              font-size: $s-input;
-            }
-          }
-
-          .info-price {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            gap: $s-min;
-            margin-bottom: $s-small;
-          }
-        }
+    .modal-dialog {
+      @media (max-width: $break-xl) {
+        margin: 0;
+        width: 100%;
+        max-width: inherit;
       }
 
-      .modal-header {
-        color: white;
-        padding-bottom: 0;
-
-        .btn-close {
-          background: url(../images/icon-close--modal-white.svg) no-repeat center center;
+      .modal-content {
+        background: transparent;
+        box-shadow: none;
+  
+        @media (max-width: $break-xl) {
+          height: 100vh;
         }
-
-        .list-date-small {
-          flex: 0 0 100%;
-        }
-
-        .panel-title {
-          margin-bottom: $s-small;
-        }
-
-        h1, h2, h3, h4, h5 {
-          color: white;
-          font-size: $s-title--item;
-
-          @media (max-width: $break-lg) {
-            font-size: $s-lead;
-          }
-        }
-      }
-
-      .modal-body {
-        & > .row {
-          @media (max-width: $break-xl) {
+  
+        .panel {
           height: 100%;
+          display: flex;
+          flex-direction: column;
+  
+          .panel-body {
+            margin-bottom: auto;
           }
-
-          & > div {
-            @media (max-width: $break-xl) {
-              height: 100%;
+  
+          .panel-bottom {
+            border-top: $light solid 1px;
+            padding-top: $s-small;
+            margin-top: $s-normal;
+          }
+  
+          .btn {
+            width: 100%;
+          }
+  
+          .panel-footer {
+            font-size: $s-input;
+            padding-top: $s-normal;
+  
+            p {
+              font-size: $s-link;
+              line-height: $lh-description;
+              margin-bottom: $s-small;
+  
+              strong {
+                display: block;
+                font-size: $s-input;
+              }
             }
+  
+            .info-price {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+              gap: $s-min;
+              margin-bottom: $s-small;
+            }
+          }
+        }
+  
+        .modal-header {
+          color: white;
+          padding-bottom: 0;
 
-            .col-slider-mobile {
+          @media (max-width: $break-xl) {
+            align-items: flex-start;
+          }
+  
+          .btn-close {
+            background: url(../images/icon-close--modal-white.svg) no-repeat center center;
+            
+            @media (max-width: $break-xl) {
+             margin-top: 0;
+            }
+          }
+  
+          .list-date-small {
+            flex: 0 0 100%;
+          }
+  
+          .panel-title {
+            margin-bottom: $s-small;
+          }
+  
+          h1, h2, h3, h4, h5 {
+            color: white;
+            font-size: $s-title--item;
+  
+            @media (max-width: $break-lg) {
+              font-size: $s-lead;
+            }
+          }
+        }
+  
+        .modal-body {
+          & > .row {
+            @media (max-width: $break-xl) {
+            height: 100%;
+            }
+  
+            & > div {
               @media (max-width: $break-xl) {
-                height: 80%;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-              }
-
-              @media (max-width: $break-md) {
-                height: 88%;
-              }
-
-              .fullherogallerySwiper {
-                @media (max-width: $break-xl) {
-                  max-width: 100%;
-                }
+                height: 100%;
               }
             }
           }
