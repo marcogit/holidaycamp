@@ -1711,12 +1711,211 @@
     <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="false">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-          <div class="modal-header">
-            <div class="row">
-              <div class="col-auto">
+          <div class="modal-header modal-header--app d-mobile">
+            <h5 class="modal-title" id="orderModalLabel">Málaga <small>Mie 24 May - Mie 31 May</small></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <a href="#" rel="button" class="btn btn-transparent btn-small" id="filters-aside--mapshow">
+              <img src="images/icon-filter--color-small.svg">
+              Filtrar
+            </a>
+          </div>
+          <div class="modal-header d-desktop">
+            <div class="row align-items-start">
+              <div class="col-auto col-header--map col-header-map---logo">
                 <img src="images/logo-icon--color-big.svg">
               </div>
-              <div class="col"></div>
+              <div class="col">
+                <!-- FORM -->
+                <div class="row align-items-start justify-content-start">
+                  <div class="col col-header--map col-header--map---medium">
+                    <h6 class="map-title">
+                      <img src="images/icon-calendar--color.svg"/>
+                      Fechas
+                    </h6>
+                    <input
+                          type="date"
+                          class="form-control form-control-xs"
+                          id=""
+                          placeholder="Añadir fecha"
+                        />
+                  </div>
+                  <div class="col col-header--map col-header--map---small">
+                    <h6 class="map-title">
+                      <img src="images/icon-users--color.svg"/>
+                      Nº de personas
+                    </h6>
+                    <input
+                          type="number"
+                          class="form-control form-control-xs"
+                          id=""
+                          placeholder="Indiferente"
+                        />
+                  </div>
+                  <div class="col col-header--map col-header--map---medium">
+                    <h6 class="map-title">Presupuesto</h6>
+                  </div>
+                  <div class="col col-header--map col-header--map---small d-desktop--big">
+                    <h6 class="map-title">Categoría</h6>
+                    <ul class="list-aside list-aside--small">
+                      <li class="p-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA10">
+                            <ul class="list-inline list-score">
+                              <li><img src="images/icon-star--color.svg"></li>
+                              <li><img src="images/icon-star--color.svg"></li>
+                              <li><img src="images/icon-star--color.svg"></li>
+                              <li><img src="images/icon-star--color.svg"></li>
+                              <li><img src="images/icon-star--color.svg"></li>
+                            </ul>
+                          </div>
+                          <span>3</span>
+                      </li>
+                      <div class="list-aside--dropdown">
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA10">
+                            <ul class="list-inline list-score">
+                              <li><img src="images/icon-star--color.svg"></li>
+                              <li><img src="images/icon-star--color.svg"></li>
+                              <li><img src="images/icon-star--color.svg"></li>
+                              <li><img src="images/icon-star--color.svg"></li>
+                            </ul>
+                          </div>
+                          <span>3</span>
+                        </li>
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA10">
+                            <ul class="list-inline list-score">
+                              <li><img src="images/icon-star--color.svg"></li>
+                              <li><img src="images/icon-star--color.svg"></li>
+                              <li><img src="images/icon-star--color.svg"></li>
+                            </ul>
+                          </div>
+                          <span>3</span>
+                        </li>
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA10">
+                            <ul class="list-inline list-score">
+                              <li><img src="images/icon-star--color.svg"></li>
+                              <li><img src="images/icon-star--color.svg"></li>
+                            </ul>
+                          </div>
+                          <span>3</span>
+                        </li>
+                        <li class="disabled">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA10" disabled>
+                            <ul class="list-inline list-score">
+                              <li><img src="images/icon-star--color.svg"></li>
+                            </ul>
+                          </div>
+                          <span>0</span>
+                        </li>
+                      </div>
+                    </ul>
+                  </div>
+                  <div class="col col-header--map col-header--map---big">
+                    <h6 class="map-title">Tipo de vivienda</h6>
+                    <ul class="list-aside list-aside--small">
+                      <li class="p-0">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="asideCheckA01">
+                          <label class="form-check-label" for="asideCheckA01">
+                            Mobil- Home
+                          </label>
+                        </div>
+                        <span>+1</span>
+                      </li>
+                      <div class="list-aside--dropdown">
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA02">
+                            <label class="form-check-label" for="asideCheckA02">
+                              Bungalow
+                            </label>
+                          </div>
+                          <span>+2</span>
+                        </li>
+                        <li class="disabled">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA03" disabled>
+                            <label class="form-check-label" for="asideCheckA03">
+                              Tienda de lona
+                            </label>
+                          </div>
+                          <span>0</span>
+                        </li>
+                        <li class="disabled">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA04" disabled>
+                            <label class="form-check-label" for="asideCheckA04">
+                              Casa, Chalet
+                            </label>
+                          </div>
+                          <span>0</labspanel>
+                        </li>
+                        <li class="disabled">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA05" disabled>
+                            <label class="form-check-label" for="asideCheckA05">
+                              Piso, Estudio
+                            </label>
+                          </div>
+                          <span>0</span>
+                        </li>
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA06">
+                            <label class="form-check-label" for="asideCheckA06">
+                              Alojamiento especial
+                            </label>
+                          </div>
+                          <span>+2</span>
+                        </li>
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA07">
+                            <label class="form-check-label" for="asideCheckA07">
+                              Chalet
+                            </label>
+                          </div>
+                          <span>+5</span>
+                        </li>
+                        <li class="active">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA08" checked>
+                            <label class="form-check-label" for="asideCheckA08">
+                              Ubicación de la tienda
+                            </label>
+                          </div>
+                          <span>+5</span>
+                        </li>
+                        <li class="disabled">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA09" disabled>
+                            <label class="form-check-label" for="asideCheckA09">
+                              Parcela para caravana
+                            </label>
+                          </div>
+                          <span>0</span>
+                        </li>
+                        <li class="disabled">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="asideCheckA10" disabled>
+                            <label class="form-check-label" for="asideCheckA10">
+                              Parcela para autocaravana
+                            </label>
+                          </div>
+                          <span>0</span>
+                        </li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+                <!-- END FORM -->
+              </div>
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>

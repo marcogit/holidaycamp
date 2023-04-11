@@ -28,6 +28,44 @@ html {
       }
     }
 
+    .dropdown {
+      &.dropdown-in-map {
+
+        .dropdown-toggle {
+          position: absolute;
+          z-index: 2;
+          padding: 0;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          border-radius: 0;
+          text-indent: -9000px;
+          box-shadow: none;
+          opacity: 0;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        .dropdown-menu {
+          padding: $s-small $s-normal;
+          border-radius: 0;
+          border-color: $light;
+          margin-left: $s-normal--n !important;
+
+          li {
+            padding: 3px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+    }
+
     .flag {
       position: relative;
       display: inline-flex;

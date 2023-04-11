@@ -33,6 +33,13 @@
 
         .btn-close {
           background: url(../images/icon-close--modal-color.svg) no-repeat center center;
+          opacity: 1;
+
+          &:hover,
+          &:active{
+            opacity: 0.5;
+            box-shadow: none;
+          }
         }
 
         &.modal-header--app {
@@ -116,7 +123,71 @@
         border-radius: 0;
 
         .modal-header {
-          border-color: $light;
+          border-color: transparent;
+          box-shadow: $sh-header;
+          z-index: 5;
+          padding-top: 0;
+          padding-bottom: 0;
+
+          & > .row {
+            width: 100%;
+          }
+
+          .col-header--map {
+           padding: $s-small $s-medium;
+           border-right: solid 1px $light;
+           min-height: 70px;
+
+           &.col-header-map---logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: $s-small;
+            padding-right: $s-normal;
+           }
+
+           &.col-header--map---small {
+            max-width: 180px;
+           }
+
+           &.col-header--map---medium {
+            max-width: 220px;
+           }
+
+           &.col-header--map---big {
+            max-width: 280px;
+           }
+          }
+
+          &.modal-header--app {
+            text-align: left;
+            justify-content: flex-start;
+            padding-left: $s-big;
+            padding-top: $s-normal;
+            padding-bottom: $s-normal;
+
+            .btn-close {
+              top: 21px;
+            }
+
+            .btn-transparent {
+              color: $secondary;
+              position: absolute;
+              right: 0;
+              top: 12px;
+            }
+
+            .modal-title {
+              text-align: left;
+              small {
+                font-weight: $f-weight--light;
+                color: $gray-text;
+                font-size: $s-label;
+                padding-left: $s-small;
+              }
+            }
+          }
         }
 
         .modal-body {

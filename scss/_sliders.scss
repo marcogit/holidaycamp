@@ -246,6 +246,14 @@
   border-radius: $br-normal;
   position: relative;
   padding-bottom: 0;
+
+  .gallery-cell {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .thumbherogallerySwiper {

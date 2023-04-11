@@ -24,6 +24,11 @@
     padding: 5px $s-small;
   }
 
+  &.form-control-xs {
+    padding: $s-min $s-small;
+    font-size: $s-link;
+  }
+
   &:focus {
     box-shadow: $sh-focus;
     border-color: $light;

@@ -139,6 +139,9 @@
   $("#filters-aside--show").click(function () {
     $("#filters-aside--panel").addClass("filters-aside--full");
   });
+  $("#filters-aside--mapshow").click(function () {
+    $("#filters-aside--panel").addClass("filters-aside--full");
+  });
   $("#filters-aside--hide").click(function () {
     $("#filters-aside--panel").removeClass("filters-aside--full");
   });
