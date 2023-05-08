@@ -26,8 +26,13 @@ footer {
       }
 
       p{
+        max-width: 240px;
+        line-height: $lh-base;
+
         @media (max-width: $break-lg) {
             text-align: center;
+            margin-left: auto;
+            margin-right: auto;
         }
       }
 
@@ -36,7 +41,7 @@ footer {
         display: block;
         font-weight: $f-weight--medium;
         margin-bottom: $s-normal;
-        margin-top: 11px;
+        margin-top: $s-small;
       }
 
       .col-footer--a {

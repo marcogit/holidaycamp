@@ -368,6 +368,11 @@ body {
 
     &.form-group--booking {
       background: $hiper-light;
+      border-color: transparent;
+
+      .input-group {
+        border-color: $light;
+      }
     }
 
     &.form-group-small {

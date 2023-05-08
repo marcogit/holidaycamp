@@ -6,7 +6,7 @@
   position: relative;
 
   @media (max-width: $break-lg) {
-    padding: $s-normal;
+    padding: $s-space-magic;
   }
 
   .panel-header {
@@ -38,6 +38,7 @@
 
       .form-group {
         margin-bottom: 0;
+        border-color: transparent;
       }
     }
   }
@@ -77,7 +78,7 @@
 
     &.hero-panel--left {
       border-radius: 0 $br-medium $br-medium 0;
-      padding-left: 0;
+      padding-left: $s-space-magic;
 
       @media (max-width: $break-lg) {
         border-radius: $br-normal;
@@ -103,7 +104,7 @@
   &.hero-bg {
     display: flex;
     height: 100%;
-    min-height: 375px;
+    min-height: 240px;
     margin-left: $s-big-big--n;
     z-index: 1;
 
@@ -118,7 +119,7 @@
       position: absolute;
       left: 0;
       right: -50%;
-      bottom: $s-extra--n;
+      bottom: -40px;
       top: $s-extra-big--n;
       border-radius: 0 0 $br-medium $br-medium;
 
@@ -150,7 +151,7 @@
       &.resume-panel--01-onlymobile {
         @media (max-width: $break-lg) {
           border-radius: 0;
-          margin: -3px -11px 15px;
+          margin: -6px -20px 15px;
         }
       }
     }
@@ -200,6 +201,14 @@
 
     .admin-panel--group {
       margin-bottom: $s-extra;
+    }
+
+    .form-footer {
+      .btn {
+        @media (max-width: $break-lg) {
+          width: 100%;
+        }
+      }
     }
 
     .btn-big {
@@ -709,8 +718,8 @@
       border-radius: 0;
       border-bottom: none;
       box-shadow: $sh-panel;
-      margin-left: -12px;
-      margin-right: -12px;
+      margin-left: -19px;
+      margin-right: -19px;
     }
 
     .panel-title {

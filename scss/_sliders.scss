@@ -239,6 +239,16 @@
   .flickity-viewport {
     overflow: visible;
   }
+
+  .flickity-page-dots {
+    bottom: 20%;
+    left: 7%;
+
+    @media (max-width: $break-lg) {
+      left: $s-small;
+      bottom: $s-small;
+    }
+  }
 }
 
 .fullherogallerySwiper {
@@ -246,6 +256,11 @@
   border-radius: $br-normal;
   position: relative;
   padding-bottom: 0;
+  height: 60vh;
+
+  @media (max-width: 1600px) {
+    height: auto;
+  }
 
   .gallery-cell {
     width: 100%;

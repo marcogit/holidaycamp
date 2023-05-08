@@ -29,10 +29,10 @@
     <link
       rel="mask-icon"
       href="images/favicons/safari-pinned-tab.svg"
-      color="#26DBAA"
+      color="#ffffff"
     />
     <link rel="icon" href="images/favicons/favicon.ico" />
-    <meta name="theme-color" content="#26DBAA" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- Custom JS -->
     <script
       src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
@@ -214,9 +214,9 @@
             </li>
           </ul>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
+        <div class="container main-container">
+          <div class="row main-row">
+            <div class="col main-col">
               <!--ACCORDION-->
               <div class="accordion accordion-form accordion-form--onlymobile" id="accordionForm">
                 <!--ACCORDION 03-->
@@ -341,7 +341,7 @@
               </div>
               <!--END ACCORDION-->
             </div>
-            <div class="col-xl-4 col-lg-3">
+            <div class="col-xl-4 col-lg-3 main-col">
               <aside class="resume-sidebar">
                 <div class="resume-sidebar--buttons d-mobile">
                   <button class="btn btn-success btn-big">Continuar <img src="images/icon-ch--right-white.svg"></button>
@@ -354,7 +354,7 @@
     <!-- FOOTER -->
     <footer class="main-footer">
       <div class="main-footer--top">
-        <div class="container">
+        <div class="container main-container">
           <ul class="list-inline list-prefooter">
             <li>
               <img
@@ -386,8 +386,8 @@
         </div>
       </div>
       <div class="main-footer--content">
-        <div class="container">
-          <div class="row">
+        <div class="container main-container">
+          <div class="row main-row">
             <div class="col-lg-3 col-footer--a">
               <div class="brand-footer">
                 <img src="images/logo-white.svg" />
@@ -400,7 +400,7 @@
               </p>
             </div>
             <div class="col-1"></div>
-            <div class="col-lg-4 col-footer--b">
+            <div class="col-lg-4 main-col col-footer--b">
               <span class="footer-title"> Destinos destacados </span>
               <ul class="list-footer">
                 <li>
@@ -429,7 +429,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-4 col-footer--b">
+            <div class="col-lg-4 main-col col-footer--b">
               <span class="footer-title"> Destinos destacados </span>
               <ul class="list-footer">
                 <li>
@@ -498,6 +498,28 @@
         </div>
       </div>
     </footer>
+    <!-- Page Menu -->
+    <div class="dropdown dropdown-fix-menu">
+      <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Menu
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="/">Home</a></li>
+        <li><a class="dropdown-item" href="list.html">Listado de Campings</a></li>
+        <li><a class="dropdown-item" href="detail.html">Camping</a></li>
+        <li><a class="dropdown-item" href="page.html">Página CMS</a></li>
+        <li><a class="dropdown-item" href="form.html">Proceso de compra</a></li>
+        <li><a class="dropdown-item" href="form_mobile_01.html">Proceso de compra (Movil) Paso 1</a></li>
+        <li><a class="dropdown-item" href="form_mobile_02.html">Proceso de compra (Movil) Paso 2</a></li>
+        <li><a class="dropdown-item active" href="form_mobile_03.html">Proceso de compra (Movil) Paso 3</a></li>
+        <li><a class="dropdown-item" href="form_mobile_04.html">Proceso de compra (Movil) Paso 4</a></li>
+        <li><a class="dropdown-item" href="admin_00.html">Vista usuario 0 (Bienvenida)</a></li>
+        <li><a class="dropdown-item" href="admin_01.html">Vista usuario 1 (Mi perfil)</a></li>
+        <li><a class="dropdown-item" href="admin_02.html">Vista usuario 2 (Mis reservas)</a></li>
+        <li><a class="dropdown-item" href="admin_03.html">Vista usuario 3 (Valoración)</a></li>
+      </ul>
+    </div>
+     <!-- END Page Menu -->
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

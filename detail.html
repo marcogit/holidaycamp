@@ -29,10 +29,10 @@
     <link
       rel="mask-icon"
       href="images/favicons/safari-pinned-tab.svg"
-      color="#26DBAA"
+      color="#ffffff"
     />
     <link rel="icon" href="images/favicons/favicon.ico" />
-    <meta name="theme-color" content="#26DBAA" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- Custom JS -->
     <script
       src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
@@ -298,7 +298,7 @@
       </section>
       <!-- Section Intro -->
       <section class="s-detail-intro">
-        <div class="container">
+        <div class="container main-container">
           <div class="panel panel-detail--intro my-bg-white panel-shadow">
             <!-- STICKER-->
             <div class="sticker sticker-success">
@@ -306,8 +306,8 @@
                 <span>10%</span>
               </div>
             </div>
-            <div class="row">
-              <div class="col col--vertical-align">
+            <div class="row main-row">
+              <div class="col main-col col--vertical-align">
                 <div class="col--vertical-align--top">
                   <ol class="breadcrumb mb-2">
                     <li class="breadcrumb-item"><a href="#">HolidayCamp</a></li>
@@ -499,7 +499,7 @@
       <!-- Scroll Spy Sections -->  
         <!-- Section Panels -->
         <section class="my-bg-hiperlight s-detail-panels" id="s-detail-01">
-          <div class="container">
+          <div class="container main-container">
             <!-- RESUME SEARCH -->
             <div class="detail--resume-search mb-4">
               <h2 class="mb-3">Alojamientos en Camping La Biznaguilla</h2>
@@ -603,7 +603,7 @@
                   >Search</a
                 >
                 <div class="row align-items-center">
-                  <div class="col">
+                  <div class="col pe-0">
                     <input
                       type="text"
                       class="form-control form-control-sm"
@@ -624,7 +624,7 @@
               <div class="panel my-bg-white panel-shadow detail-panel--subitem">
                 <div class="row">
                   <!-- COL 00 -->
-                  <div class="col-lg-2 col-md-3 col-4">
+                  <div class="col-lg-2 col-md-3 col-4 pe-0">
                     <figure class="figure-fix-img figure-fix-img--subitem">
                       <span>
                         <img src="images/thumbnail_list.jpg" />
@@ -769,7 +769,7 @@
               <div class="panel my-bg-white panel-shadow detail-panel--subitem">
                 <div class="row">
                   <!-- COL 00 -->
-                  <div class="col-lg-2 col-md-3 col-4">
+                  <div class="col-lg-2 col-md-3 col-4 pe-0">
                     <figure class="figure-fix-img figure-fix-img--subitem">
                       <span>
                         <img src="images/thumbnail_list.jpg" />
@@ -915,10 +915,10 @@
         </section>
         <!-- Section Content -->
         <section class="my-bg-white s-detail-info" id="s-detail-02">
-          <div class="container">
+          <div class="container main-container">
             <h4>Presentación de Camping La Biznaguilla</h4>
-            <div class="row justify-content-between">
-              <div class="col-md-8">
+            <div class="row main-row justify-content-between">
+              <div class="col-md-8 main-col">
                 <article>
                   <p>
                     El camping La Biznaguilla, en Málaga está situado cerca del
@@ -1003,7 +1003,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-4 col-border">
+              <div class="col-lg-3 col-md-4 col-border main-col">
                 <aside class="info-aside">
                   <div class="ratio ratio-16x9 box-ratio custom-ratio mb-4">
                     <video src="images/demo_video.mp4" controls="controls">
@@ -1065,9 +1065,9 @@
         </section>
         <!-- Section Opinions -->
         <section class="my-bg-white s-detail-opinions" id="s-detail-03">
-          <div class="container">
-            <div class="s-header row mb-3">
-              <div class="col-lg col-title">
+          <div class="container main-container">
+            <div class="s-header row main-row mb-3">
+              <div class="col-lg col-title main-col">
                 <h4>Opiniones de Camping La Biznaguilla</h4>
                 <ul class="list-inline list-score">
                   <li>
@@ -1224,15 +1224,17 @@
                       <div class="col-auto d-desktop">
                         <div class="s-header--select">
                           <label class="form-label">Ordenar por:</label>
-                          <select
-                            class="form-select form-select-sm"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Precio más bajo</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                          <div class="dropdown dropdown-select">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              Precio más bajo
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Recomendaciones</a></li>
+                              <li><a class="dropdown-item active" href="#">Precio más bajo</a></li>
+                              <li><a class="dropdown-item" href="#">Precio más alto</a></li>
+                              <li><a class="dropdown-item" href="#">Mñaxima puntuación</a></li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1431,7 +1433,7 @@
     <!-- FOOTER -->
     <footer class="main-footer">
       <div class="main-footer--top">
-        <div class="container">
+        <div class="container main-container">
           <ul class="list-inline list-prefooter">
             <li>
               <img
@@ -1463,8 +1465,8 @@
         </div>
       </div>
       <div class="main-footer--content">
-        <div class="container">
-          <div class="row">
+        <div class="container main-container">
+          <div class="row main-row">
             <div class="col-lg-3 col-footer--a">
               <div class="brand-footer">
                 <img src="images/logo-white.svg" />
@@ -1477,7 +1479,7 @@
               </p>
             </div>
             <div class="col-1"></div>
-            <div class="col-lg-4 col-footer--b">
+            <div class="col-lg-4 main-col col-footer--b">
               <span class="footer-title"> Destinos destacados </span>
               <ul class="list-footer">
                 <li>
@@ -1506,7 +1508,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-4 col-footer--b">
+            <div class="col-lg-4 main-col col-footer--b">
               <span class="footer-title"> Destinos destacados </span>
               <ul class="list-footer">
                 <li>
@@ -1575,7 +1577,28 @@
         </div>
       </div>
     </footer>
-
+    <!-- Page Menu -->
+    <div class="dropdown dropdown-fix-menu">
+      <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Menu
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="/">Home</a></li>
+        <li><a class="dropdown-item" href="list.html">Listado de Campings</a></li>
+        <li><a class="dropdown-item active" href="detail.html">Camping</a></li>
+        <li><a class="dropdown-item" href="page.html">Página CMS</a></li>
+        <li><a class="dropdown-item" href="form.html">Proceso de compra</a></li>
+        <li><a class="dropdown-item" href="form_mobile_01.html">Proceso de compra (Movil) Paso 1</a></li>
+        <li><a class="dropdown-item" href="form_mobile_02.html">Proceso de compra (Movil) Paso 2</a></li>
+        <li><a class="dropdown-item" href="form_mobile_03.html">Proceso de compra (Movil) Paso 3</a></li>
+        <li><a class="dropdown-item" href="form_mobile_04.html">Proceso de compra (Movil) Paso 4</a></li>
+        <li><a class="dropdown-item" href="admin_00.html">Vista usuario 0 (Bienvenida)</a></li>
+        <li><a class="dropdown-item" href="admin_01.html">Vista usuario 1 (Mi perfil)</a></li>
+        <li><a class="dropdown-item" href="admin_02.html">Vista usuario 2 (Mis reservas)</a></li>
+        <li><a class="dropdown-item" href="admin_03.html">Vista usuario 3 (Valoración)</a></li>
+      </ul>
+    </div>
+     <!-- END Page Menu -->
     <!-- Modal Search -->
     <div
       class="modal fade"
@@ -1742,7 +1765,7 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-xxl-10 col-xl-9 col-center--modal">
+              <div class="col col-center--modal">
                   <!-- Slider -->
                   <div class="fullherogallerySwiper">
                       <div class="gallery-cell">
@@ -1805,7 +1828,7 @@
                     </div>
                 </div>
               </div>
-              <div class="col-xxl-2 col-xl-3 d-desktop--big">
+              <div class="colum-gallery-date d-desktop--big">
                 <div class="panel panel-small my-bg-white">
                   <div class="panel-header">
                     <h5>Servicios</h5>
@@ -2025,7 +2048,7 @@
                   </div>
                   <!--Content-->
                   <div class="modal-body--content">
-                    <ul class="list-inline list-date-small">
+                    <ul class="list-inline list-date-small list-inline--datephoto">
                       <li>
                         <img src="images/icon-space--color-small.svg">
                         <small> 22m2 </small>
@@ -2039,7 +2062,7 @@
                         <small> 2 habitaciones </small>
                       </li>
                     </ul>
-                    <ul class="list-inline mb-2">
+                    <ul class="list-inline mb-3">
                       <li>
                         <div class="badge badge-small badge-outline">
                           Lago

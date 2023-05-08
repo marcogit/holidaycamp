@@ -29,10 +29,10 @@
     <link
       rel="mask-icon"
       href="images/favicons/safari-pinned-tab.svg"
-      color="#26DBAA"
+      color="#ffffff"
     />
     <link rel="icon" href="images/favicons/favicon.ico" />
-    <meta name="theme-color" content="#26DBAA" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- Custom JS -->
     <script
       src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
@@ -338,7 +338,7 @@
             </form>
             <form class="d-mobile">
               <div class="row align-items-center">
-                <div class="col">
+                <div class="col pe-0">
                   <input
                         type="text"
                         class="form-control form-control-sm"
@@ -347,7 +347,7 @@
                       />
                 </div>
                 <div class="col-auto">
-                  <button class="btn btn-primary btn-small btn-search">
+                  <button class="btn btn-primary btn-search btn-small">
                     <img src="images/icon-search--white.svg" />
                   </button>
                 </div>
@@ -373,15 +373,17 @@
               <div class="col-auto d-desktop">
                 <div class="s-header--select">
                   <label class="form-label">Ordenar por:</label>
-                  <select
-                    class="form-select form-select-sm"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Precio más bajo</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+                  <div class="dropdown dropdown-select">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Precio más bajo
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Recomendaciones</a></li>
+                      <li><a class="dropdown-item active" href="#">Precio más bajo</a></li>
+                      <li><a class="dropdown-item" href="#">Precio más alto</a></li>
+                      <li><a class="dropdown-item" href="#">Mñaxima puntuación</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="col-auto">
@@ -1542,7 +1544,7 @@
     <!-- FOOTER -->
     <footer class="main-footer">
       <div class="main-footer--top">
-        <div class="container">
+        <div class="container main-container">
           <ul class="list-inline list-prefooter">
             <li>
               <img
@@ -1574,8 +1576,8 @@
         </div>
       </div>
       <div class="main-footer--content">
-        <div class="container">
-          <div class="row">
+        <div class="container main-container">
+          <div class="row main-row">
             <div class="col-lg-3 col-footer--a">
               <div class="brand-footer">
                 <img src="images/logo-white.svg" />
@@ -1588,7 +1590,7 @@
               </p>
             </div>
             <div class="col-1"></div>
-            <div class="col-lg-4 col-footer--b">
+            <div class="col-lg-4 main-col col-footer--b">
               <span class="footer-title"> Destinos destacados </span>
               <ul class="list-footer">
                 <li>
@@ -1617,7 +1619,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-4 col-footer--b">
+            <div class="col-lg-4 main-col col-footer--b">
               <span class="footer-title"> Destinos destacados </span>
               <ul class="list-footer">
                 <li>
@@ -1686,7 +1688,28 @@
         </div>
       </div>
     </footer>
-
+    <!-- Page Menu -->
+    <div class="dropdown dropdown-fix-menu">
+      <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Menu
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="/">Home</a></li>
+        <li><a class="dropdown-item active" href="list.html">Listado de Campings</a></li>
+        <li><a class="dropdown-item" href="detail.html">Camping</a></li>
+        <li><a class="dropdown-item" href="page.html">Página CMS</a></li>
+        <li><a class="dropdown-item" href="form.html">Proceso de compra</a></li>
+        <li><a class="dropdown-item" href="form_mobile_01.html">Proceso de compra (Movil) Paso 1</a></li>
+        <li><a class="dropdown-item" href="form_mobile_02.html">Proceso de compra (Movil) Paso 2</a></li>
+        <li><a class="dropdown-item" href="form_mobile_03.html">Proceso de compra (Movil) Paso 3</a></li>
+        <li><a class="dropdown-item" href="form_mobile_04.html">Proceso de compra (Movil) Paso 4</a></li>
+        <li><a class="dropdown-item" href="admin_00.html">Vista usuario 0 (Bienvenida)</a></li>
+        <li><a class="dropdown-item" href="admin_01.html">Vista usuario 1 (Mi perfil)</a></li>
+        <li><a class="dropdown-item" href="admin_02.html">Vista usuario 2 (Mis reservas)</a></li>
+        <li><a class="dropdown-item" href="admin_03.html">Vista usuario 3 (Valoración)</a></li>
+      </ul>
+    </div>
+     <!-- END Page Menu -->
     <!-- Modal Order -->
     <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="false">
       <div class="modal-dialog modal-dialog-centered">

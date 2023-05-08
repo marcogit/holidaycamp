@@ -4,7 +4,7 @@
   letter-spacing: $ls-medium;
   font-weight: $f-weight--medium;
   border-radius: $br-small;
-  padding: $s-small $s-normal;
+  padding: $s-small 10px;
   border: none;
   transition: $tr-normal;
   min-width: $s-min-w-button;
@@ -149,6 +149,12 @@
     padding-bottom: $s-normal;
     height: 100%;
     width: 100%;
+    max-width: 100%;
+    min-width: inherit
+  }
+
+  &.btn-min-w {
+    min-width: 150px;
   }
 }
 
