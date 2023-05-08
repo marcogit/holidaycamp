@@ -275,6 +275,7 @@ body {
       list-style: none;
       padding: 0;
       margin: 0;
+      gap: $s-small;
   
       &.list-inline--v {
         margin-top: $s-small;
