@@ -1,0 +1,45 @@
+#slider-range {
+  background: $bg-range;
+  height: 8px;
+  border-color: transparent;
+  border-radius: $br-big;
+
+  .ui-slider-range {
+    background: $secondary;
+    border-color: $secondary;
+    top: -1px;
+    bottom: -1px;
+    height: inherit;
+  }
+
+  .ui-slider-handle {
+    border-radius: $br-big;
+    width: $s-normal;
+    height: $s-normal;
+    background: white;
+    border-color: transparent;
+    box-shadow: $sh-md;
+
+    &:focus-visible {
+      border: none;
+    }
+  }
+}
+
+.list-inline--pbar {
+  .p-bar {
+    display: block;
+    width: 100%;
+    background: $bg-pbar;
+    transition: $tr-normal;
+  
+    &.active {
+      background: $bg-pbar--active;
+    }
+  }
+}
+
+.number-range {
+  display: flex;
+  gap: $s-small;
+}

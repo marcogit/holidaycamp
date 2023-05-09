@@ -58,6 +58,8 @@
       rel="stylesheet"
       href="css/flickity.css"
     />
+    <!-- jquery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet" />
   </head>
@@ -428,7 +430,83 @@
                         <h6>Presupuesto</h6>
                       </div>
                       <div class="sidebar-module--body">
+                        <!-- Rango de precios -->
+                        <div id="price-slider">
+                          <ul class="list-inline list-inline--pbar">
+                            <li>
+                              <div class="p-bar" style="height: 10%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 20%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 30%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 40%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 50%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 60%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 70%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 80%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 90%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 100%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 90%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 75%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 60%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 55%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 50%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 60%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 44%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 40%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 35%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 20%;"></div>
+                            </li>
+                            <li>
+                              <div class="p-bar" style="height: 10%;"></div>
+                            </li>
+                          </ul>
+                          <div id="slider-range"></div>
+                          <div class="number-range">
 
+                              <input type="text" id="amount-min" class="form-control form-range form-range--min" value="100€ min." readonly />
+
+                              <input type="text" id="amount-max" class="form-control form-range form-range--max" value="500€ max." readonly />
+
+                          </div>
+                        </div>
+                        <!-- /Rango de precios -->
                       </div>
                     </div>
                     <!-- MODULE -->
@@ -2407,6 +2485,9 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <!--Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
     <!-- Flickity JS -->
     <script src="js/flickity.pkgd.min.js"></script>
     <!-- Custom JS -->

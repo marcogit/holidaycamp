@@ -276,6 +276,20 @@ body {
       padding: 0;
       margin: 0;
       gap: $s-small;
+
+      &.list-inline--pbar {
+        gap: 1px;
+        padding-left: $s-min;
+        padding-right: $s-min;
+
+        li {
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-end;
+          height: 48px;
+        }
+      }
   
       &.list-inline--v {
         margin-top: $s-small;

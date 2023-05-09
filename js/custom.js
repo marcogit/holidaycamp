@@ -1,5 +1,44 @@
 /* Javascript */
+// Llamar a la función updateActiveBars al inicio y en cada cambio en el slider
+function updateActiveBars(uiValues) {
+  // Obtener los valores del slider
+  var minValue = uiValues[0];
+  var maxValue = uiValues[1];
+
+  
+
+  // Obtener todas las barras
+  var bars = $("#price-slider .p-bar");
+
+  // Iterar sobre cada barra y añadir/eliminar la clase "active"
+  bars.each(function (index, bar) {
+    var barValue = (index / (bars.length - 1)) * 1000;
+    if (barValue >= minValue && barValue <= maxValue) {
+      $(bar).addClass("active");
+    } else {
+      $(bar).removeClass("active");
+    }
+  });
+}
+
 (function () {
+  $("#slider-range").slider({
+    range: true,
+    min: 0,
+    max: 1000,
+    values: [100, 500],
+    slide: function (event, ui) {
+      $("#amount-min").val(ui.values[0] + "€ min.");
+      $("#amount-max").val(ui.values[1] + "€ max.");
+
+      // Actualizar las barras activas
+      updateActiveBars(ui.values);
+    },
+  });
+
+  // Inicializar las barras activas
+  updateActiveBars($("#slider-range").slider("values"));
+
   $(".cardSwiper").flickity({
     initialIndex: 0,
     cellAlign: "left",
@@ -17,7 +56,7 @@
     prevNextButtons: true,
     pageDots: false,
   });
-  
+
   $(".herogallerySwiper").flickity({
     initialIndex: 0,
     wrapAround: true,
@@ -38,11 +77,11 @@
 
   $(".sublistSwiper").flickity({
     initialIndex: 0,
-      cellAlign: "left",
-      setGallerySize: true,
-      lazyLoad: true,
-      prevNextButtons: true,
-      pageDots: false,
+    cellAlign: "left",
+    setGallerySize: true,
+    lazyLoad: true,
+    prevNextButtons: true,
+    pageDots: false,
   });
 
   $("#galleryfullModal").on("shown.bs.modal", function () {
