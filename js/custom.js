@@ -1,11 +1,9 @@
 /* Javascript */
-// Llamar a la función updateActiveBars al inicio y en cada cambio en el slider
+// RANGO DE PRECIOS - Llamar a la función updateActiveBars al inicio y en cada cambio en el slider
 function updateActiveBars(uiValues) {
   // Obtener los valores del slider
   var minValue = uiValues[0];
   var maxValue = uiValues[1];
-
-  
 
   // Obtener todas las barras
   var bars = $("#price-slider .p-bar");
@@ -22,6 +20,122 @@ function updateActiveBars(uiValues) {
 }
 
 (function () {
+  /*-- Datepicker --*/
+  var dateFormat = "dd/mm/yy",
+    from = $("#from").datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onSelect: function (selectedDate) {
+        to.datepicker("option", "minDate", selectedDate);
+      },
+      beforeShowDay: function (date) {
+        var startDate = getDate(from); // Fecha de inicio del rango
+        var endDate = getDate(to); // Fecha de fin del rango
+
+        // Verificar si la fecha está dentro del rango
+        if (date >= startDate && date <= endDate) {
+          return [true, "active", "Dentro del rango"]; // Aplicar clase "active"
+        }
+
+        return [true, "", ""];
+      },
+    }),
+    to = $("#to").datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onSelect: function (selectedDate) {
+        from.datepicker("option", "maxDate", selectedDate);
+      },
+      beforeShowDay: function (date) {
+        var startDate = getDate(from); // Fecha de inicio del rango
+        var endDate = getDate(to); // Fecha de fin del rango
+
+        // Verificar si la fecha está dentro del rango
+        if (date >= startDate && date <= endDate) {
+          return [true, "active", "Dentro del rango"]; // Aplicar clase "active"
+        }
+
+        return [true, "", ""];
+      },
+    });
+
+  function getDate(element) {
+    var date;
+    try {
+      date = $.datepicker.parseDate(dateFormat, element.val());
+    } catch (error) {
+      date = null;
+    }
+
+    return date;
+  }
+
+  // Datepicker en español -
+  $.datepicker.regional["es"] = {
+    closeText: "Cerrar",
+    prevText: "< Ant",
+    nextText: "Sig >",
+    currentText: "Hoy",
+    monthNames: [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre",
+    ],
+    monthNamesShort: [
+      "Ene",
+      "Feb",
+      "Mar",
+      "Abr",
+      "May",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dic",
+    ],
+    dayNames: [
+      "Domingo",
+      "Lunes",
+      "Martes",
+      "Miércoles",
+      "Jueves",
+      "Viernes",
+      "Sábado",
+    ],
+    dayNamesShort: ["Dom", "Lun", "Mar", "Mié", "Juv", "Vie", "Sáb"],
+    dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sá"],
+    weekHeader: "Sm",
+    dateFormat: "dd/mm/yy",
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: "",
+  };
+  $.datepicker.setDefaults($.datepicker.regional["es"]);
+
+  $(function () {
+    $("#datepicker").datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      changeYear: true,
+      numberOfMonths: 1,
+    });
+  });
+
+  // RANGO DE PRECIOS -
   $("#slider-range").slider({
     range: true,
     min: 0,
@@ -82,6 +196,22 @@ function updateActiveBars(uiValues) {
     lazyLoad: true,
     prevNextButtons: true,
     pageDots: false,
+  });
+
+  $("#mapModal").on("shown.bs.modal", function () {
+    $("#slider-range--map").slider({
+      range: true,
+      min: 0,
+      max: 1000,
+      values: [100, 500],
+      slide: function (event, ui) {
+        $("#amount-min").val(ui.values[0] + "€ min.");
+        $("#amount-max").val(ui.values[1] + "€ max.");
+
+        // Actualizar las barras activas
+        updateActiveBars(ui.values);
+      },
+    });
   });
 
   $("#galleryfullModal").on("shown.bs.modal", function () {
