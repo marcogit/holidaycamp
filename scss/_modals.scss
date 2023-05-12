@@ -1,4 +1,6 @@
 .modal {
+  height: 100dvh;
+
   .modal-dialog {
     &.modal-xl {
       @media (min-width: $break-xl) {
@@ -213,7 +215,7 @@
         box-shadow: none;
 
         @media (max-width: $break-xl) {
-          height: 100vh;
+          height: 100dvh;
         }
 
         .panel {
